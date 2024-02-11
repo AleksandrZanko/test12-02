@@ -12,22 +12,26 @@
   </head>
   <body>
     <main class="page-main">
-      <form action="#" class="form">
+      <form class="form">
         <div class="name-wrapper">
           <label for="name">Имя</label>
-          <input type="text" class="name" id="name"/>
+          <input type="text" class="name input-field" id="name"/>
+          <span class="input-name-error error-field"></span>
         </div>
         <div class="email-wrapper">
           <label for="email">E-mail</label>
-          <input type="email" class="email" id="email"/>
+          <input type="email" class="email input-field" id="email"/>
+          <span class="error-field input-email-error"></span>
         </div>
         <div class="phone-wrapper">
           <label for="phone">Телефон</label>
-          <input type="text" class="phone" id="phone"/>
+          <input type="text" class="phone input-field" id="phone"/>
+          <span class="input-phone-error error-field"></span>
         </div>
         <div class="message-wrapper">
           <label for="message">Сообщение</label>
-          <textarea class="message" name="message" id="message" cols="30" rows="10"></textarea>
+          <textarea class="message input-field" name="message" id="message" cols="30" rows="10"></textarea>
+          <span class="input-message-error error-field"></span>
         </div>
 				<button class="form-button">Отправить</button>
       </form>
@@ -38,6 +42,5 @@
 				<span>Привет!</span>
 			</div>
     </main>
-    <script src="bundle.js"></script>
   </body>
 </html>

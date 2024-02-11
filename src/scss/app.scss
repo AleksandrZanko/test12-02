@@ -1,150 +1,182 @@
 $text-color: #222224;
-$font: 'Roboto', sans-serif;
+$font: "Roboto", sans-serif;
 
 body {
   color: $text-color;
 }
 
 .form {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-	margin: 0 auto;
-	margin-top: 20px;
-	padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
 
-	width: 500px;
+  width: 500px;
 
-	font-family: $font;
-	font-size: 18px;
-	border: 2px solid #000000;
-	border-radius: 5px;
+  font-family: $font;
+  font-size: 18px;
+  border: 2px solid #000000;
+  border-radius: 5px;
 }
 
-.name-wrapper, .email-wrapper, .phone-wrapper, .message-wrapper {
-	display: flex;
-	flex-direction: column;
+.name-wrapper,
+.email-wrapper,
+.phone-wrapper,
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-.name, .email, .phone, .message {
-	padding: 5px;
-	font-size: 16px;
+.name,
+.email,
+.phone,
+.message {
+  padding: 5px;
+  font-size: 16px;
 }
 
 .form-button {
-	max-width: 150px;
+  max-width: 150px;
 
-	margin: 0 auto;
-	padding: 5px;
+  margin: 0 auto;
+  padding: 5px;
 
-	color: #ffffff;
-	background-color: #4CAF50;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+  color: #ffffff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
 
 .form-button:hover {
-	opacity: 0.9;
-	cursor: pointer;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 @keyframes shake {
-	0%, 100% {transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {transform: translateX(10px);}
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .error {
-	display: block;
-	border: 2px solid red;
-	animation-name: shake;
-	animation-duration: 0.6s;
-} 
+  display: block;
+  border: 2px solid red;
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
 
 .success {
-	border: 2px solid lightgreen;
+  border: 2px solid lightgreen;
+}
+
+.input-name-error,
+.input-email-error,
+.input-phone-error,
+.input-message-error {
+  color: red;
+  font-size: 14px;
 }
 
 .modal-button {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	margin: 0;
-	padding: 10px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  margin: 0;
+  padding: 10px;
 
-	font-family: $font;
-	font-size: 16px;
-	color: #ffffff;
-	background-color: #0d6efd;
-	border: none;
-	border-radius: 5px;
+  font-family: $font;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 5px;
 }
 
 .modal-button:hover {
-	opacity: 0.8;
-	cursor: pointer;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .overlay {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-	width: 100vw;
-	height: 100vh;
-	
-	background-color: #000000;
-	opacity: 0.5;
-	z-index: 1;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000000;
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .modal-window {
-	display: none;
+  display: none;
 
-	position: absolute;
-	top: calc(50% - 65px);
-	left: calc(50% - 100px);
+  position: absolute;
+  top: calc(50% - 65px);
+  left: calc(50% - 100px);
 
-	padding-top: 50px;
+  padding-top: 50px;
 
-	width: 200px;
-	height: 130px;
+  width: 200px;
+  height: 130px;
 
-	font-family: $font;
-	font-size: 18px;
-	background-color: #ffffff;
-	text-align: center;
-	border: 10px solid lightblue;
-	border-radius: 5px;
-	z-index: 2;
-	box-sizing: border-box;
-	animation-name: show;
-	animation-duration: 0.8s;
+  font-family: $font;
+  font-size: 18px;
+  background-color: #ffffff;
+  text-align: center;
+  border: 10px solid lightblue;
+  border-radius: 5px;
+  z-index: 2;
+  box-sizing: border-box;
+  animation-name: show;
+  animation-duration: 0.8s;
 }
 
 .modal-close {
-	position: absolute;
-	top: 0;
-	right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-	background-color: transparent;
-	border: none;
-	transition: all 0.5s;
+  background-color: transparent;
+  border: none;
+  transition: all 0.5s;
 }
 
 .modal-close:hover {
-	cursor: pointer;
-	transform: scale(1.4);
+  cursor: pointer;
+  transform: scale(1.4);
 }
 
 .active {
-	display: block;
+  display: block;
 }
 
 @keyframes show {
-	0% {opacity: 0}
-	100% {opacity: 1}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
