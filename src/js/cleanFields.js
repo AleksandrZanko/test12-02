@@ -1,7 +1,6 @@
 const inputFields = document.querySelectorAll(".input-field");
 const errorFields = document.querySelectorAll(".error-field");
 
-// check name
 function cleanFields() {
   for (let item of inputFields) {
     item.value = "";
